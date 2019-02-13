@@ -1,2 +1,2 @@
-# oraclecloudday
-this is for oracle cloud day demo
+ORACLE CLOUD DAY
+Refer to the document attached in the Github Repo :
