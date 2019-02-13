@@ -1,0 +1,34 @@
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: cloudday
+spec:
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: cloudday
+        version: v1
+    spec:
+      containers:
+      - name: cloudday
+        image: iad.ocir.io/orasenatdhubsred01/demo-java:1.0
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 8080
+      imagePullSecrets:
+      - name: regcred
+---
+apiVersion: v1
+kind: Service
+metadata:
+ name: cloudday
+ labels:
+   app: cloudday
+spec:
+ ports:
+ - port: 8080
+   targetPort: 8080
+ selector:
+   app: cloudday
+ type: LoadBalancer
