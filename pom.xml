@@ -24,4 +24,16 @@
       </plugin>
     </plugins>
   </build>
+  <distributionManagement>
+  <repository>
+    <id>cloudday_repo</id>
+    <name>cloudday Maven Repository</name>
+    <url>https://cloudday-gse00013863.developer.ocp.oraclecloud.com/profile/cloudday-gse00013863/s/cloudday-gse00013863_cloudday_933/maven/</url>
+  </repository>
+  <snapshotRepository>
+    <id>cloudday_repo</id>
+    <name>clouddayMaven Repository</name>
+    <url>https://cloudday-gse00013863.developer.ocp.oraclecloud.com/profile/cloudday-gse00013863/s/cloudday-gse00013863_cloudday_933/maven/</url>
+  </snapshotRepository>
+</distributionManagement>
 </project>
